@@ -1,0 +1,25 @@
+.container{
+    width: 90%;
+    min-height: 100vh;
+    background: #101020;
+    border-radius: 2rem;
+    border-left: 5px solid #7b1fa2;
+    /* border-top: 5px solid #7b1fa2; */
+}
+
+.statHeading{
+    color: whitesmoke;
+    text-align: center;
+    padding-top: 10%;
+}
+
+.mainHeading{
+    background: linear-gradient(330deg, #e05252 0%, #99e052 25%, #52e0e0 50%, #9952e0 75%, #e05252 100%);
+background-clip: text;
+-webkit-text-fill-color: transparent;
+
+}
+
+.cssClass{
+    color: aliceblue;
+}
