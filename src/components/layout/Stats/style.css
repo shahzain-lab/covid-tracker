@@ -5,3 +5,13 @@ span.MuiStepLabel-label.Mui-completed.MuiStepLabel-alternativeLabel.css-qivjh0-M
 .css-1ydyjjr-MuiTypography-root{
     color: white!important;
 }
+
+.Chart__Container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.LineChart{
+    color: aliceblue;
+}

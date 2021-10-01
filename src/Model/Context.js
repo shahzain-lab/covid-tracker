@@ -1,12 +1,13 @@
 import React, { createContext, useEffect, useState } from "react";
-import { fetchData, fetchDailyData } from './API';
+import { fetchData, fetchDailyData, fetchCountries } from './API';
 
 
 export const GlobalData = createContext('');
 
 export const GlobalProvider = ({children}) => {
     const [data, setData] = useState({});
-    const [dailyData, setDailyData] = useState([])
+    const [dailyData, setDailyData] = useState([]);
+    const [countryName, setCountryName] = useState([])
 
     useEffect(() => {
       const getFetchedData = async () => {
@@ -16,16 +17,29 @@ export const GlobalProvider = ({children}) => {
       getFetchedData();
     }, []);
 
+      useEffect(() => {
+        const fetchedDailyData = async () => {
+          const getData = await fetchDailyData();
+          setDailyData(getData)
+        }
+        fetchedDailyData();
+      }, []);
+
+    
     useEffect(() => {
-      const fetchedDailyData = async () => {
-        const getData = await fetchDailyData();
-        setDailyData(getData)
+      const fetchedCountriesName = async () => {
+        const getData = await fetchCountries();
+        setCountryName(getData)
       }
-      fetchedDailyData();
+      fetchedCountriesName();
     }, []);
+
+    const handleCountry = (country) => {
+      console.log(country)
+    };
     
     return(
-        <GlobalData.Provider value={{data, dailyData}}>
+        <GlobalData.Provider value={{data, dailyData, countryName, handleCountry}}>
             {children}
         </GlobalData.Provider>
     )

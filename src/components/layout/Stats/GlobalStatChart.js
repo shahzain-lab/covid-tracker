@@ -4,12 +4,15 @@ import { GlobalData } from '../../../Model/Context'
 
 function GlobalStatChart() {
     const { dailyData } = useContext(GlobalData);
-    console.log(dailyData, 'con')
+    
     return (
-        <div>
+        <div className="Chart__Container">
     {dailyData.length ? (
         <Line
+        className="LineChart"
        data={{
+
+        scaleFontColor: "#FFFFFF" ,
          labels: dailyData.map(({ date }) => date),
          datasets: [{
            data: dailyData.map(({confirmed}) => confirmed),
@@ -23,8 +26,30 @@ function GlobalStatChart() {
           backgroundColor: "rgba(255,0,0,0.5)",
           fill: true,
          }],
+         options: { 
+          
+          scales: {
+              yAxes: [{
+                  ticks: {
+                      fontColor: "green",
+                      fontSize: 18,
+                      stepSize: 1,
+                      beginAtZero: true
+                  }
+              }],
+              xAxes: [{
+                  ticks: {
+                      fontColor: "purple",
+                      fontSize: 14,
+                      stepSize: 1,
+                      beginAtZero: true
+                  }
+              }]
+          }
+      }
        }}
-    /> ) : console.log("not")}
+       
+    /> ) : null}
         </div>
     )
 }

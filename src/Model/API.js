@@ -27,3 +27,14 @@ const { data } = await axios.get(`${api}/daily`);
   }
   
 }
+
+
+export const fetchCountries = async () => {
+  try{
+    const { data: {countries} } = await axios.get(`${api}/countries`);
+    const getCountryName = countries.map(country => country.name)
+    return getCountryName;
+  }catch (err) {
+    console.log(err)
+  }
+}
