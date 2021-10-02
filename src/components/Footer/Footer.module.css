@@ -1,0 +1,34 @@
+.container{
+    position: absolute;
+    bottom: 0;
+    width: 100vw;
+    min-height: 100px;
+    background-color: #101020;
+    display: flex;
+}
+
+.vl {
+    border-right: 6px solid #7b1fa2;
+    min-height: 100px;
+    width: 150px;
+    padding: 5px;
+    color: aliceblue;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  }
+
+  .vl h2{
+      letter-spacing: 1px;
+  }
+
+  .links{
+      display: flex;
+      flex-direction: column;
+      margin-left: 5px;
+      color: #3b3b3b;
+      line-height: 2rem;
+  }
+
+  .links a{
+      text-decoration: none;
+      list-style: none;
+  }

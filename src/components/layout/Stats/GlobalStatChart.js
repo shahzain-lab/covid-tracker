@@ -26,27 +26,6 @@ function GlobalStatChart() {
           backgroundColor: "rgba(255,0,0,0.5)",
           fill: true,
          }],
-         options: { 
-          
-          scales: {
-              yAxes: [{
-                  ticks: {
-                      fontColor: "green",
-                      fontSize: 18,
-                      stepSize: 1,
-                      beginAtZero: true
-                  }
-              }],
-              xAxes: [{
-                  ticks: {
-                      fontColor: "purple",
-                      fontSize: 14,
-                      stepSize: 1,
-                      beginAtZero: true
-                  }
-              }]
-          }
-      }
        }}
        
     /> ) : null}

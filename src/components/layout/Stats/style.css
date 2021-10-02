@@ -10,8 +10,10 @@ span.MuiStepLabel-label.Mui-completed.MuiStepLabel-alternativeLabel.css-qivjh0-M
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: 2rem;
 }
 
-.LineChart{
+.lastUpdate{
     color: aliceblue;
+    padding-left: 2rem;
 }

@@ -154,7 +154,7 @@ ColorlibStepIcon.propTypes = {
 
 export default function GlobalStatContainer() {
  
-    const {data: { confirmed, recovered, deaths }} = useContext(GlobalData);
+    const {data: { confirmed, recovered, deaths, lastUpdate }} = useContext(GlobalData);
   if(!confirmed){
     return <Progress />
   }
@@ -205,6 +205,7 @@ export default function GlobalStatContainer() {
 
   return (
     <Stack sx={{ width: '100%', mt: 10}} spacing={4}>
+      <Typography variant="h6" className="lastUpdate">Last update: <span style={{color: 'gray'}}> {new Date(lastUpdate).toDateString()}</span> </Typography>
       <Stepper alternativeLabel  activeStep={2} connector={<ColorlibConnector />}>
         {steps.map((label, i) => (
           <Step key={i} >
