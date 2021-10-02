@@ -4,10 +4,9 @@ import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
-import SearchIcon from '@mui/icons-material/Search';
 import LiveHelpIcon from '@mui/icons-material/LiveHelp';
 import { Button } from '@mui/material';
-import ModelCountry from './Model';
+import CountryList from './CountryList';
 
 
 const AppBarContainer = styled(AppBar)(({theme}) => ({
@@ -29,7 +28,7 @@ function AppbarBox() {
                   COVIDONA
               </Typography>
               <Button variant="contained" sx={{mr: '5px'}} color="secondary"><LiveHelpIcon /> Help Center </Button>
-              <ModelCountry />
+              <CountryList />
             
             </Toolbar>
           </AppBarContainer>

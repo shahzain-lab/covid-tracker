@@ -1,16 +1,19 @@
 import React from 'react';
 import styles  from './App.module.css';
-import { AppbarBox, Header, Layout } from './components'
+import { AppbarBox } from './components'
+import CountryData from './components/countryData/CountryLayout';
 
 
 const App = () => {
      return(
      <div className={styles.container}>
        <AppbarBox />
-       <Header />
+       {/* <Header /> */}
        <div className={styles.layout}>
-       <Layout />
+       <CountryData />
+       {/* <Layout /> */}
        </div>
+       {/* <Footer /> */}
        </div>
      )
  }

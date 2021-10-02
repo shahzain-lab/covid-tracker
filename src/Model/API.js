@@ -23,18 +23,29 @@ const { data } = await axios.get(`${api}/daily`);
   }))
   return modifyData;
   }catch(err) {
-    console.log(err)
+    console.log(err.meassage)
   }
   
 }
 
 
-export const fetchCountries = async () => {
+export const fetchCountriesName = async () => {
   try{
     const { data: {countries} } = await axios.get(`${api}/countries`);
     const getCountryName = countries.map(country => country.name)
     return getCountryName;
   }catch (err) {
-    console.log(err)
+    console.log(err.message)
   }
 }
+
+export const fetchCountriesData = async (country) => {
+  try{
+    console.log(country, 'contry');
+    const { data } = await axios.get(`${api}/countries/${country}`);
+    return data
+  } catch(err) {
+    console.log(err.message)
+  }
+}
+
