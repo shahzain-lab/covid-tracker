@@ -18,6 +18,7 @@ function Header() {
                 <li>Keep a safe distance</li>
                 </ul>
            <Button variant="contained" style={{backgroundColor: '#7b1fa2', marginLeft: '5%'}}>Help Center <ArrowRightAltIcon/></Button>
+
         </div>
     )
 }

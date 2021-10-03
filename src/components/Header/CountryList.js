@@ -8,6 +8,7 @@ import InputLabel from '@mui/material/InputLabel';
 import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
+import { Link } from 'react-router-dom';
 
 
 const ITEM_HEIGHT = 48;
@@ -47,7 +48,7 @@ export default function CountryList() {
               key={i}
               value={name}
             >
-              {name}
+              <Link to={`/country/${name}`}>{name}</Link>
             </MenuItem>
           )): <Progress />}
         </Select>

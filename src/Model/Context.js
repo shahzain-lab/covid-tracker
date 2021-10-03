@@ -51,7 +51,7 @@ export const GlobalProvider = ({children}) => {
     useEffect(() => {
       if(!name) return
       const fetchedCountriesData = async () => {
-        const getData = await fetchCountriesData(name)
+        const getData = await fetchCountriesData(name);
         setCountryData(getData);
       }
       fetchedCountriesData()
