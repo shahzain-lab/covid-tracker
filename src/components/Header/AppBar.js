@@ -5,8 +5,9 @@ import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 // import LiveHelpIcon from '@mui/icons-material/LiveHelp';
-// import { Button } from '@mui/material';
+import { Button } from '@mui/material';
 import CountryList from './CountryList';
+import { Link } from 'react-router-dom';
 
 
 const AppBarContainer = styled(AppBar)(({theme}) => ({
@@ -27,7 +28,10 @@ function AppbarBox() {
               >
                   COVIDONA
               </Typography>
-              {/* <Button variant="contained" sx={{mr: '5px'}} color="secondary"><LiveHelpIcon /> Help Center </Button> */}
+              <Link to="/">
+              <Button variant="contained" sx={{mr: '5px'}} color="secondary"> Home</Button>
+              </Link>
+              {/* <LiveHelpIcon /> Help Center */}
               <CountryList />
             
             </Toolbar>

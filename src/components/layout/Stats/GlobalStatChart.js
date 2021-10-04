@@ -26,6 +26,9 @@ function GlobalStatChart() {
           backgroundColor: "rgba(255,0,0,0.5)",
           fill: true,
          }],
+         options: {
+            maintainAspectRatio: false
+            }
        }}
        
     /> ) : null}

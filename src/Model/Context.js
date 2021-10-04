@@ -1,4 +1,5 @@
 import React, { createContext, useEffect, useState } from "react";
+import { useParams } from "react-router";
 import { fetchData, fetchDailyData, fetchCountriesName, fetchCountriesData } from './API';
 
 
@@ -47,17 +48,16 @@ export const GlobalProvider = ({children}) => {
     };
 
 
-
     useEffect(() => {
       if(!name) return
       const fetchedCountriesData = async () => {
         const getData = await fetchCountriesData(name);
         setCountryData(getData);
+    console.log(getData);
       }
       fetchedCountriesData()
     }, [name]);
 
-    
     return(
         <GlobalData.Provider value={{
           data,

@@ -1,13 +1,15 @@
 import React, { useContext } from 'react';
 import { Bar } from 'react-chartjs-2';
 import { GlobalData } from '../../Model/Context';
+import styles from './countryLayout.module.css';
+
 
 function CountryStatBar() {
     const {countryData: {confirmed, recovered, deaths}} = useContext(GlobalData);
     if(!confirmed){return null}
 
     return (
-        <div>
+      <div >
             <Bar
         data={{
           labels: ['Infected', 'Recovered', 'Deaths'],
@@ -20,6 +22,7 @@ function CountryStatBar() {
           ],
         }}
         options={{
+          maintainAspectRatio: false,
           legend: { display: false },
         }}
       />

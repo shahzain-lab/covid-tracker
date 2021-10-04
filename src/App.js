@@ -16,10 +16,9 @@ const App = () => {
            <div className={styles.layout}>
         <Routes>
                <Route path="/" element={<Layout />} />
-               <Route path="/country/:slug" element={<CountryData />}/>
+               <Route path=":slug" element={<CountryData />}/>
                {/* NOT FOUND */}
                <Route path="*" element={<PagenotFound />} />
-               <Route path="/country/:*" element={<PagenotFound />} />
        </Routes>
           </div>
          <Footer />

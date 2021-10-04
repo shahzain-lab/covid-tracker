@@ -9,6 +9,7 @@ import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
 import { Link } from 'react-router-dom';
+import styles from './Header.module.css'
 
 
 const ITEM_HEIGHT = 48;
@@ -36,9 +37,9 @@ export default function CountryList() {
           labelId="demo-simple-select-autowidth-label"
           id="demo-simple-select-autowidth"
           defaultValue=''
-          onChange={(e) => {
-              getCountry(e.target.value)
-            }}
+              onChange={(e) => {
+                getCountry(e.target.value)
+              }}
           style={{color: 'white', fontSize: 'bold'}} 
           input={<OutlinedInput label="Name" />}
           MenuProps={MenuProps}
@@ -48,7 +49,10 @@ export default function CountryList() {
               key={i}
               value={name}
             >
-              <Link to={`/country/${name}`}>{name}</Link>
+              <Link 
+              className={styles.listItem}
+              to={`${name}`}>{name}
+            </Link>
             </MenuItem>
           )): <Progress />}
         </Select>

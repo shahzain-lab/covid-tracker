@@ -41,6 +41,7 @@ export const fetchCountriesName = async () => {
 
 export const fetchCountriesData = async (country) => {
   try{
+    console.log(country, 'spp')
     const { data } = await axios.get(`${api}/countries/${country}`);
     return data
   } catch(err) {

@@ -1,8 +1,8 @@
-span.MuiStepLabel-label.Mui-completed.MuiStepLabel-alternativeLabel.css-qivjh0-MuiStepLabel-label,.css-qivjh0-MuiStepLabel-label.Mui-active {
+.MuiStepLabel-label.MuiStepLabel-alternativeLabel,.css-qivjh0-MuiStepLabel-label,.css-qivjh0-MuiStepLabel-label.Mui-active {
     color: aliceblue!important;
 }
 
-.css-1ydyjjr-MuiTypography-root{
+.css-1ydyjjr-MuiTypography-root,.css-15qsggp,.css-farnub.Mui-active ,.css-farnub,.Mui-completed,.css-qivjh0-MuiStepLabel-label,.Mui-completed,.css-1ydyjjr-MuiTypography-root {
     color: white!important;
 }
 
@@ -10,7 +10,17 @@ span.MuiStepLabel-label.Mui-completed.MuiStepLabel-alternativeLabel.css-qivjh0-M
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 2rem;
+    margin: 2rem;
+    border-right: 3px solid #7b1fa2;
+    border-left: 3px solid #7b1fa2;
+    border-top: 3px solid #7b1fa2;
+    border-radius: 2rem;
+    padding: 1rem;
+}
+
+.LineChart{
+    margin: 2rem;
+
 }
 
 .lastUpdate{
