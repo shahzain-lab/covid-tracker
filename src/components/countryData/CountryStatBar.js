@@ -1,7 +1,6 @@
 import React, { useContext } from 'react';
 import { Bar } from 'react-chartjs-2';
 import { GlobalData } from '../../Model/Context';
-import styles from './countryLayout.module.css';
 
 
 function CountryStatBar() {

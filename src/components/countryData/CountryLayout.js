@@ -12,7 +12,6 @@ function CountryData() {
     const {slug} = useParams();
     if(!countryData){return <Progress />}
     const isCountryFound = slug !== name;
-    console.log(slug,name)
 
     return (
         <div className={styles.container}>
