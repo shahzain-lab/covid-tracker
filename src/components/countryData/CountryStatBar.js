@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 import { Bar } from 'react-chartjs-2';
 import { GlobalData } from '../../Model/Context';
+import styles from './countryLayout.module.css';
 
 
 function CountryStatBar() {
@@ -8,7 +9,7 @@ function CountryStatBar() {
     if(!confirmed){return null}
 
     return (
-      <div >
+      <div className={styles.barContainer}>
             <Bar
         data={{
           labels: ['Infected', 'Recovered', 'Deaths'],

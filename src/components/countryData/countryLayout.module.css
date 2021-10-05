@@ -9,6 +9,16 @@
     padding: 2%;
 }
 
+.barContainer{
+    height: 50vh;
+    margin: 1rem;
+    padding: 1rem;
+    border-radius: 2rem;
+    border-right: 3px solid #7b1fa2;
+    border-left: 3px solid #7b1fa2;
+    border-top: 3px solid #7b1fa2;
+}
+
 
 .conCard, .recCard, .deathCard{
     padding: 10px;

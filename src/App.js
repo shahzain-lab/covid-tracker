@@ -1,7 +1,12 @@
 import React from 'react';
 import styles  from './App.module.css';
-import { AppbarBox, CountryData, Header, Layout } from './components'
-import Footer from './components/Footer/Footer';
+import {
+    AppbarBox,
+    CountryData,
+    Header,
+    Layout,
+    Footer 
+   } from './components';
 
 // react-router
 import { Routes, Route } from 'react-router-dom';

@@ -1,4 +1,4 @@
-import React, { createContext, useEffect, useState } from "react";
+import React, { createContext, useCallback, useEffect, useState } from "react";
 import { fetchData, fetchDailyData, fetchCountriesName, fetchCountriesData } from './API';
 
 
@@ -11,6 +11,7 @@ export const GlobalProvider = ({children}) => {
     const [countryData, setCountryData] = useState({});
     const [name, setName] = useState('')
 
+    // for Globsl data
     useEffect(() => {
       const getFetchedData = async () => {
         const getData = await fetchData();
@@ -21,6 +22,7 @@ export const GlobalProvider = ({children}) => {
 
 
 
+     // for Globsl data on daily basis
       useEffect(() => {
         const fetchedDailyData = async () => {
           const getData = await fetchDailyData();
@@ -31,7 +33,7 @@ export const GlobalProvider = ({children}) => {
 
 
 
-    
+     // for returned countries name
     useEffect(() => {
       const fetchedCountriesName = async () => {
         const getData = await fetchCountriesName();
@@ -42,11 +44,13 @@ export const GlobalProvider = ({children}) => {
 
 
 
-    const getCountry = (country) => {
+    //getting country name
+    const getCountry = useCallback((country) => {
         setName(country)
-    };
+    }, []);
 
 
+     // for  data using countryName
     useEffect(() => {
       if(!name) return
       const fetchedCountriesData = async () => {

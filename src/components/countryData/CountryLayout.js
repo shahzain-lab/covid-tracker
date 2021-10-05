@@ -26,4 +26,4 @@ function CountryData() {
     )
 }
 
-export default CountryData
+export default CountryData;
