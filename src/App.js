@@ -12,20 +12,25 @@ import {
 import { Routes, Route } from 'react-router-dom';
 import PagenotFound from './components/PagenotFound';
 
+const Home= () => (
+   <>
+   <Header />
+   <div className={styles.layout}>
+   <Layout />
+   </div>
+   </>
+)
 
 const App = () => {
      return(
      <div className={styles.container}>
           <AppbarBox />
-           <Header />
-           <div className={styles.layout}>
         <Routes>
-               <Route path="/" element={<Layout />} />
+               <Route path="/" element={<Home />} />
                <Route path=":slug" element={<CountryData />}/>
                {/* NOT FOUND */}
                <Route path="*" element={<PagenotFound />} />
        </Routes>
-          </div>
          <Footer />
       </div>
      )

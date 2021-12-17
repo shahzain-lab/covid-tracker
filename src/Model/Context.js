@@ -11,7 +11,7 @@ export const GlobalProvider = ({children}) => {
     const [countryData, setCountryData] = useState({});
     const [name, setName] = useState('')
 
-    // for Globsl data
+    // for Global data
     useEffect(() => {
       const getFetchedData = async () => {
         const getData = await fetchData();
@@ -22,7 +22,7 @@ export const GlobalProvider = ({children}) => {
 
 
 
-     // for Globsl data on daily basis
+     // for Global data on daily basis
       useEffect(() => {
         const fetchedDailyData = async () => {
           const getData = await fetchDailyData();

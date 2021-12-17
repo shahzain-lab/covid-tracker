@@ -14,6 +14,7 @@ function CountryData() {
     const isCountryFound = slug !== name;
 
     return (
+      <div className={styles.layout}>
         <div className={styles.container}>
           {isCountryFound ?  <Typography variant="h4" style={{paddingBottom: '5%', textAlign: 'center', color: 'white'}} >Country Not Found "{slug}"</Typography> :
           <>
@@ -22,6 +23,7 @@ function CountryData() {
           <CountryStatBar />
           </>
           }
+        </div>
         </div>
     )
 }
